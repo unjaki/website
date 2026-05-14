@@ -20,9 +20,12 @@ export default function Home() {
           if (data.bannerUrl) {
             setBannerUrl(data.bannerUrl);
           }
+        } else {
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Server returned error fetching banner:', response.status, errorData);
         }
       } catch (error) {
-        console.error('Failed to load real banner:', error);
+        console.error('Network error or server unreachable while fetching banner:', error);
       }
     }
     fetchBanner();
