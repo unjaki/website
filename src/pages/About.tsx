@@ -23,19 +23,20 @@ export default function About() {
         
         <div className="space-y-12 text-lg text-gray-700 leading-relaxed font-mono">
           <p className="border-l border-[#1a1a1a]/10 pl-8 uppercase tracking-wide text-sm">
-            Formerly a joke faction created by wholesalekevin12, now evolved into a Division within the stratocracy and reached 3k members, more than most of the noobic divisions nowadays.
+            Founded on <span className="text-[#1a1a1a] font-bold italic">December 6th, 2024</span>, GSMC began when the first Chief Surgeon, <span className="text-[#1a1a1a] font-bold italic">"wholesalekevin12"</span>, established the Roblox group. At its inception, the rank of Chief Surgeon was titled "Surgeon General."
           </p>
           <p className="border-l border-[#1a1a1a]/10 pl-8 uppercase tracking-wide text-sm">
-            The Corps was founded on the principle that <span className="text-[#1a1a1a] font-bold italic">"No one is left behind,"</span> a directive that 
-            drives every SOP and engagement protocol we deploy today. Our history is marked by 
-            pivotal rescues during the Great Expansion and the stabilization of the Northern Sector.
+            What started as a joke faction has evolved into a powerhouse Division within the Stratocracy, surpassing 3,000 members—a testament to its resilience and organizational superiority compared to the newer divisions.
+          </p>
+          <p className="border-l border-[#1a1a1a]/10 pl-8 uppercase tracking-wide text-sm">
+            Originally intended as the first sub-unit of a broader network, the Corps was founded on the principle that <span className="text-[#1a1a1a] font-bold italic">"No one is left behind."</span> This directive continues to drive every SOP and engagement protocol we deploy today.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-16 border-y border-[#1a1a1a]/10">
              <div className="group">
                 <History className="w-8 h-8 mb-6 text-[#2c5d3f] transition-transform" />
                 <h3 className="font-black uppercase tracking-[0.3em] text-[10px] mb-3 text-[#1a1a1a]">System_Legacy</h3>
-                <p className="text-sm text-gray-500 leading-relaxed uppercase font-mono">Continuous service since the founding of the Stratocracy coalition.</p>
+                <p className="text-sm text-gray-500 leading-relaxed uppercase font-mono">Continuous service since the founding of the Stratocracy coalition in late 2024.</p>
              </div>
              <div className="group">
                 <Target className="w-8 h-8 mb-6 text-[#2c5d3f] transition-transform" />
@@ -44,9 +45,14 @@ export default function About() {
              </div>
           </div>
 
-          <p className="italic border-l-4 border-[#2c5d3f] pl-6 py-4 bg-white/40 text-xs tracking-[0.2em] uppercase text-gray-500">
-            [A link to the full Google Doc history will be provided here once available.]
-          </p>
+          <a 
+            href="https://docs.google.com/document/d/1LZQUrLWWKw9KhA1ZhtM6kh0kF3FgjsTjr4AMKz1MgXU/edit?tab=t.0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block italic border-l-4 border-[#2c5d3f] pl-6 py-4 bg-white/40 text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-[#2c5d3f] transition-colors"
+          >
+            Access Full History_Log [UNREDACTED]
+          </a>
         </div>
       </section>
 

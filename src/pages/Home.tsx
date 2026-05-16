@@ -110,7 +110,7 @@ export default function Home() {
               <div className="h-[1px] flex-grow bg-[#1a1a1a]/10" />
             </div>
             <h3 className="font-bold mb-4 uppercase text-[10px] tracking-[0.3em] font-mono text-[#1a1a1a]">01_Operational_Readiness</h3>
-            <p className="text-xs text-gray-500 font-mono leading-relaxed uppercase tracking-wide text-left">24/7 Readiness for high-intensity conflicts and humanitarian crisis response.</p>
+            <p className="text-xs text-gray-500 font-mono leading-relaxed uppercase tracking-wide text-left">Always ready for operations within the Corps and the Stratocracy.</p>
           </div>
           <div className="group">
             <div className="flex items-center gap-3 mb-6">

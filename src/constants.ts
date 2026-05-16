@@ -17,32 +17,18 @@ export const GSMC_DESCRIPTION = "The Ground Service Medical Corps is responsible
 export const DOCUMENTS: Document[] = [
   {
     id: 'sop-01',
-    title: 'Standard Operating Procedures (SOP)',
+    title: 'Operating Procedures & Regulations (OP&R)',
     summary: 'Core guidelines for field operations, communication protocols, and chain of command within GSMC.',
-    url: '#',
+    url: 'https://docs.google.com/document/d/1Qq5clu6VuMCpwNRq6oLzA8Jd2Lv42SnKJefeaVRPfV0/edit?usp=sharing',
     category: 'Operational',
   },
   {
-    id: 'fm-med-01',
-    title: 'Field Manual: Battlefield Medicine',
+    id: 'promo-01',
+    title: 'Promotional Document',
     summary: 'Comprehensive guide to stabilizing trauma patients in high-intensity combat zones.',
-    url: '#',
-    category: 'Medical',
+    url: 'https://docs.google.com/document/d/1ht5Jt3RgsTbYdngya2hHQclYXtkJMUxGq_fYZ7BP1jk/edit?usp=sharing',
+    category: 'Promotional',
   },
-  {
-    id: 'gs-01',
-    title: 'Grooming & Uniform Standards',
-    summary: 'Regulatory documentation regarding visual identity and professionalism of GSMC personnel.',
-    url: '#',
-    category: 'Administrative',
-  },
-  {
-    id: 'tc-01',
-    title: 'Tactical Communications',
-    summary: 'Encryption keys, radio codes, and distress signal protocols for remote operations.',
-    url: '#',
-    category: 'Operational',
-  }
 ];
 
 export const UNITS: Unit[] = [
@@ -60,27 +46,43 @@ export const UNITS: Unit[] = [
           {
             id: '29cmb',
             name: '29th Combat Medic Battalion',
-            description: 'The 29th Battalion focuses on the LARP aspects of the Ground Service Medical Corps through the battalion system, emphasizing immersive roleplay and standard medical procedures.',
+            description: 'The 29th Combat Medic Battalion is the Ground Service Medical Corps’ roleplay-focused battalion. Members of the 29th are trained in realistic medical procedures and are expected to complete three key certifications: First Aid, Trauma, and Medical.',
             logoUrl: '/logos/29th_Logo_Large.webp',
+            children: [
+              {
+              id: 'cbrn',
+              name: '7th CBRN Division',
+              description: 'The 7th CBRN is a group of people which are committed to studying epidemiology, virus control, causes, signs and anything in relation to infectious viruses. It’s a more centralized and complicated detachment of the 29th battalion; which in turn makes it highly selective and is really only good for members which are truly interested in MEDLARP.',
+              logoUrl: '/logos/7th_CBRN_Logo.webp',
+              }
+            ]
           },
           {
             id: '33cmb',
             name: '33rd Combat Medic Battalion',
-            description: 'The 33rd Combat Medic Battalion focuses on the Combat Medic aspect of the corps with a variety of unique sub-divisions. Members act as frontline healers during high-intensity engagements.',
+            description: 'The 33rd Combat Medic Battalion serves as the Ground Service Medical Corps combat-oriented battalion, specializing in third-person shooter and field medical support. Members of the 33rd act as frontline healers during raids, defences, and Stratocracy events, ensuring sustained combat readiness across all engagements.',
             logoUrl: '/logos/33rd_Logo_Large.webp',
             children: [
               {
                 id: 'medsoc',
                 name: 'Medical Special Operations Command (MEDSOC)',
-                description: 'Elite medical rapid response team specializing in high-intensity combat extractions and behind-enemy-lines stabilization.',
+                description: 'The Medical Special Operations (MEDSOC) serves as the primary elite healing-oriented division of the Noobic Stratocracy. Tasked with providing supporting to both Ground Service Personnel and the 5th Noobic Special Operations Command, MEDSOC operatives are always prepared to assist their fellow Noobians; on any battlefield, at any time.',
+                logoUrl: '/logos/MEDSOC_Logo.webp',
               }
             ]
           },
           {
             id: 'oam',
             name: 'Office of Administration and Management (OAM)',
-            description: 'Responsible for the overarching strategic planning, logistics, and resource management and personnel oversight within the Ground Service Medical Corps.',
+            description: 'The Office of Administration and Management serves as the Headquarters Platoon under MEDCOM, functioning as the command and oversight body of the Ground Service Medical Corps in lore. Its members oversee essential administrative operations, including moderation, promotions, media, auditing, and internal reporting.',
             logoUrl: '/logos/oam.webp',
+            children: [
+              {
+                id: 'fas',
+                name: 'Foreign Affairs Sector (FAS)',
+                description: 'The FAS is the custom made sub-divison for foreign affairs related issues, it could only be joined by officers.'
+              }
+            ]
           }
         ]
       }

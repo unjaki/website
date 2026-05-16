@@ -25,7 +25,7 @@ export default function Navigation() {
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tighter uppercase font-display leading-none text-[#1a1a1a]">GSMC</span>
-            <span className="text-[8px] font-mono tracking-[0.2em] text-[#2c5d3f] font-black italic">TACTICAL_MED_CORPS</span>
+            <span className="text-[8px] font-mono tracking-[0.2em] text-[#2c5d3f] font-black italic">STRATOCRACY_MED_CORPS</span>
           </div>
         </NavLink>
       </div>

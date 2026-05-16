@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import path from 'path';
@@ -9,38 +10,73 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
-  // API Route to fetch Discord Banner from Vanity Invite
+  // API Route to fetch Discord Banner and Info
   app.get('/api/discord/banner/:code', async (req, res) => {
     const { code } = req.params;
     try {
-      console.log(`Fetching banner for Discord code: ${code}`);
-      const response = await axios.get(`https://discord.com/api/v10/invites/${code}`, {
+      console.log(`[BACKEND] Fetching info for Discord code: ${code}`);
+      const response = await axios.get(`https://discord.com/api/v10/invites/${code}?with_counts=true`, {
+        timeout: 5000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
       });
       
-      const guild = response.data.guild;
+      const { guild, approximate_member_count, approximate_presence_count } = response.data;
+
+      const result: any = {
+        guildName: guild?.name,
+        memberCount: approximate_member_count,
+        presenceCount: approximate_presence_count,
+        bannerUrl: null
+      };
 
       if (guild && guild.banner) {
-        const bannerUrl = `https://cdn.discordapp.com/banners/${guild.id}/${guild.banner}.png?size=2048`;
-        console.log(`Found banner URL: ${bannerUrl}`);
-        return res.json({ bannerUrl });
+        result.bannerUrl = `https://cdn.discordapp.com/banners/${guild.id}/${guild.banner}.png?size=2048`;
       }
 
-      console.log('No banner found for this guild');
-      res.status(404).json({ error: 'No banner found for this guild' });
+      res.json(result);
     } catch (error: any) {
-      console.error('Discord API Error:', error.message);
-      if (error.response) {
-        console.error('Discord Status:', error.response.status);
-        console.error('Discord Data:', JSON.stringify(error.response.data));
-        res.status(error.response.status).json({ error: 'Discord API error', details: error.response.data });
-      } else {
-        res.status(500).json({ error: 'Internal server error', details: error.message });
-      }
+      console.error(`[BACKEND] Discord API Error (${code}):`, error.response?.data || error.message);
+      res.status(error.response?.status || 500).json({ error: 'Failed to fetch Discord data', details: error.message });
+    }
+  });
+
+  // API Route to fetch Roblox Group Info
+  app.get('/api/roblox/group/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      console.log(`[BACKEND] Fetching Roblox Group: ${id}`);
+      const response = await axios.get(`https://groups.roblox.com/v1/groups/${id}`, {
+        timeout: 5000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+      });
+      res.json(response.data);
+    } catch (error: any) {
+      console.error(`[BACKEND] Roblox Group Info Error (${id}):`, error.response?.data || error.message);
+      res.status(error.response?.status || 500).json({ error: 'Failed to fetch Roblox data', details: error.message });
+    }
+  });
+
+  // API Route to fetch Roblox Group Thumbnail
+  app.get('/api/roblox/thumbnail/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      console.log(`[BACKEND] Fetching Roblox Thumbnail: ${id}`);
+      const response = await axios.get(`https://thumbnails.roblox.com/v1/groups/icons?groupIds=${id}&size=420x420&format=Png&isCircular=false`, {
+        timeout: 5000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+      });
+      res.json(response.data);
+    } catch (error: any) {
+      console.error(`[BACKEND] Roblox Thumbnail Error (${id}):`, error.response?.data || error.message);
+      res.status(error.response?.status || 500).json({ error: 'Failed to fetch Roblox thumbnail', details: error.message });
     }
   });
 
