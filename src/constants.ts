@@ -51,7 +51,7 @@ export const UNITS: Unit[] = [
             children: [
               {
               id: 'cbrn',
-              name: '7th CBRN Division',
+              name: '7th CBRN Defense Regiment',
               description: 'The 7th CBRN is a group of people which are committed to studying epidemiology, virus control, causes, signs and anything in relation to infectious viruses. It’s a more centralized and complicated detachment of the 29th battalion; which in turn makes it highly selective and is really only good for members which are truly interested in MEDLARP.',
               logoUrl: '/logos/7th_CBRN_Logo.webp',
               }
