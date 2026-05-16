@@ -1,13 +1,6 @@
 # Ground Service Medical Corps (GSMC) Website
 
-A high-performance, full-stack web application built with React, Vite, and Express.
-
-## Features
-
-- **Full-Stack Architecture**: Express server hosting a React single-page application.
-- **Discord Integration**: Automatically fetches the latest server banner from the Discord API (via server-side proxy to avoid CORS).
-- **Modern UI**: Styled with Tailwind CSS v4 and animated with Motion.
-- **Production Ready**: Optimized build process using Vite and esbuild.
+A web app designed for GSMC as a hobby of mine (Hi GSMC!!).
 
 ## Local Development
 
