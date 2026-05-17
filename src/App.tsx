@@ -27,7 +27,7 @@ export default function App() {
         </Routes>
 
         <footer className="mt-32 pb-12 text-center text-xs text-gray-600 font-mono uppercase tracking-[0.3em] border-t border-white/5 pt-12">
-          GSMC // Property of the Office of Administration & Management // {new Date().getFullYear()} // SYSTEM_ROOT_AUTH
+          GSMC // Property of the Office of Administration and Management // {new Date().getFullYear()} // SYSTEM_ROOT_AUTH
         </footer>
       </div>
     </BrowserRouter>
