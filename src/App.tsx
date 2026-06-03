@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Units from './pages/Units';
+import Officers from './pages/Officers';
 import Documents from './pages/Documents';
 import About from './pages/About';
 import Join from './pages/Join';
@@ -15,12 +16,13 @@ import Join from './pages/Join';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#f2efea] text-[#1a1a1a] selection:bg-[#2c5d3f]/30">
+      <div className="min-h-screen bg-[#070907] text-gray-200 selection:bg-emerald-500/20">
         <Navigation />
         
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/units" element={<Units />} />
+          <Route path="/officers" element={<Officers />} />
           <Route path="/documents" element={<Documents />} />
           <Route path="/about" element={<About />} />
           <Route path="/join" element={<Join />} />

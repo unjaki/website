@@ -7,7 +7,7 @@ import { Unit, Document } from './types';
 
 export const DISCORD_CONFIG = {
   guildId: '123456789012345678', // Replace with real GSMC Guild ID
-  vanityCode: 'gsmc',
+  vanityCode: 'aSXDfk9Uva',
   fallbackBanner: 'https://images.unsplash.com/photo-1579346487030-dfb613ac3673?auto=format&fit=crop&q=80&w=2000',
   logoUrl: '/logos/GSMC_Logov2.webp',
 };
@@ -51,7 +51,7 @@ export const UNITS: Unit[] = [
             children: [
               {
               id: 'cbrn',
-              name: '7th CBRN Defense Regiment',
+              name: '7th CBRN Division',
               description: 'The 7th CBRN is a group of people which are committed to studying epidemiology, virus control, causes, signs and anything in relation to infectious viruses. It’s a more centralized and complicated detachment of the 29th battalion; which in turn makes it highly selective and is really only good for members which are truly interested in MEDLARP.',
               logoUrl: '/logos/7th_CBRN_Logo.webp',
               }
@@ -93,6 +93,7 @@ export const UNITS: Unit[] = [
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Units', href: '/units' },
+  { label: 'Officers', href: '/officers' },
   { label: 'Documents', href: '/documents' },
   { label: 'About Us', href: '/about' },
   { label: 'How to Join', href: '/join' },
