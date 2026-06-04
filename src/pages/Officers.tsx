@@ -34,8 +34,8 @@ const OFFICERS_DATA: Cluster[] = [
     logo: "/logos/GSMC_Logov2.webp",
     description: "Supreme administrative and operations unit defining the strategic direction and resource management of the entire Medical Corps.",
     co: {
-      name: "Colonel Ryabckawesome",
-      rank: "COL / O-6",
+      name: "Major Ryabckawesome",
+      rank: "MAJ / O-4",
       role: "Surgeon General (CO)",
       bio: "WIP",
       certs: ["COMMAND_OPS", "SOP_AUDIT", "TRAUMA_LEAD"],
@@ -44,7 +44,7 @@ const OFFICERS_DATA: Cluster[] = [
     },
     xo: {
       name: "VACANT",
-      rank: "MAJ / O-4",
+      rank: "N/A",
       role: "Vice Surgeon General (XO)",
       bio: "WIP",
       certs: ["TRAUMA_LEAD", "ADMIN_CHIEF", "OPERATIONS_CMD"],
@@ -52,7 +52,7 @@ const OFFICERS_DATA: Cluster[] = [
     },
     medAdvisory: {
       name: "VACANT",
-      rank: "CPT / O-3",
+      rank: "N/A",
       role: "Surgical Director (3ic)",
       bio: "WIP",
       certs: ["FIELD_TRIAGE", "DIPLOMATIC_SEC", "ADVISORY"],
