@@ -40,7 +40,7 @@ const OFFICERS_DATA: Cluster[] = [
       bio: "WIP",
       certs: ["COMMAND_OPS", "SOP_AUDIT", "TRAUMA_LEAD"],
       color: "from-emerald-950/20 via-neutral-900/40 to-[#121512]",
-      image: "/images/medcom/ryabckawesome.webp"
+      image: "/images/medcom/Ryabckawesome.webp"
     },
     xo: {
       name: "VACANT",
@@ -111,7 +111,7 @@ const OFFICERS_DATA: Cluster[] = [
       bio: "WIP",
       certs: ["MEDLARP_INSTRUCTOR", "TRAUMA_EXPERT", "CBRN_LEAD"],
       color: "from-emerald-950/20 via-neutral-900/40 to-[#121512]",
-      image: "/images/29th/some_dudette85.webp"
+      image: "/images/29th/Some_Dudette85.webp"
     },
     xo: {
       name: "Specialist Whitestar",
@@ -120,7 +120,7 @@ const OFFICERS_DATA: Cluster[] = [
       bio: "WIP",
       certs: ["TRAUMA_CHIEF", "ADMIN_LOGS", "SOP-01_CERT"],
       color: "from-zinc-900/30 via-neutral-900/40 to-[#121512]",
-      image: "/images/29th/whitestarbowler121.webp"
+      image: "/images/29th/Whitestarbowler121.webp"
     },
     medAdvisory: {
       name: "VACANT",
@@ -137,7 +137,7 @@ const OFFICERS_DATA: Cluster[] = [
       bio: "WIP",
       certs: ["SURGICAL_OPS", "CLINICAL_TRAINER", "TRAUMA_TRAINER"],
       color: "from-zinc-900/30 via-neutral-900/40 to-[#121512]",
-      image: "/images/29th/uplikewoah.webp"
+      image: "/images/29th/UpLikeWoah.webp"
     }
   },
   {
